@@ -4,10 +4,8 @@ metadata:
   name: demo
   namespace: crossplane-system
 spec:
-  compositionSelector:
-    matchLabels:
-      provider: aws
-      
+  compositionRef:
+    name: appserver
   parameters:
     region: "ap-south-1"
     vm_size: t2.micro
